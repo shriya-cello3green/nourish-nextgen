@@ -35,49 +35,6 @@ php -S localhost:8000
 
 Then visit `http://localhost:8000` in your browser.
 
-## Deployment to AWS S3 + CloudFront
-
-### Prerequisites
-- AWS CLI installed and configured
-- An AWS account with appropriate permissions
-
-### Deployment Steps
-
-1. **Create S3 Bucket**
-```bash
-aws s3 mb s3://your-nutrition-website-bucket
-```
-
-2. **Enable Static Website Hosting**
-```bash
-aws s3 website s3://your-nutrition-website-bucket --index-document index.html
-```
-
-3. **Upload Files**
-```bash
-aws s3 sync . s3://your-nutrition-website-bucket --exclude ".git/*" --exclude "README.md"
-```
-
-4. **Set Bucket Policy for Public Access**
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "PublicReadGetObject",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::your-nutrition-website-bucket/*"
-        }
-    ]
-}
-```
-
-5. **Create CloudFront Distribution**
-- Origin: Your S3 bucket website endpoint
-- Default Root Object: index.html
-- Enable HTTPS
 
 ## File Structure
 
@@ -107,3 +64,4 @@ Feel free to customize:
 ## License
 
 This project is for educational purposes.
+
