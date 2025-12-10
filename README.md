@@ -35,6 +35,15 @@ php -S localhost:8000
 
 Then visit `http://localhost:8000` in your browser.
 
+## Deployment
+
+This website is hosted on GitHub Pages.
+
+### GitHub Pages Deployment
+
+The site is automatically deployed from the main branch. Any changes pushed to the repository will be reflected on the live site.
+
+**Live Site:** [Add your GitHub Pages URL here]
 
 ## File Structure
 
@@ -50,7 +59,7 @@ sc-website/
 
 Feel free to customize:
 - Contact information in `index.html`
-- Colors in `styles.css` (main color: #2c5f2d, accent: #97c93d)
+- Colors in `styles.css` (main color: #4f6339 olive green, background: #ece8d3 beige)
 - Event details and descriptions
 - Add images to enhance visual appeal
 
@@ -64,4 +73,3 @@ Feel free to customize:
 ## License
 
 This project is for educational purposes.
-
